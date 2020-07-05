@@ -1,0 +1,7 @@
+{
+  "name": "bblr_a",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
