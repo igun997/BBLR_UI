@@ -40,11 +40,17 @@ export class AuthProvider {
         show:false,
         id:"home"
       },{
-        label:"Tips",
+        label:"Video",
+        root:BeritaPage,
+        icon:"camera",
+        show:false,
+        id:"vidio"
+      },{
+        label:"Panduan",
         root:BeritaPage,
         icon:"calendar",
         show:false,
-        id:"berita"
+        id:"panduan"
       },{
         label:"BBLR",
         root:BblrPage,
@@ -63,7 +69,8 @@ export class AuthProvider {
       "home",
       "logout",
       "bblr",
-      "berita",
+      "vidio",
+      "panduan",
     ]
     this.onLoggedOut = [
       "login",

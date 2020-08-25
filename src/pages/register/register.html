@@ -9,12 +9,12 @@
 </ion-header>
 
 <ion-content padding>
-  <form  #form="ngForm" (ngSubmit)="register()">
+  <form #form="ngForm" (ngSubmit)="register()">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center>
           <div text-center>
-            <h3>Register</h3>
+            <h3>Pendaftaran</h3>
           </div>
           <div padding>
             <ion-list>
@@ -22,36 +22,65 @@
                 <ion-label>
                   <ion-icon name="person"></ion-icon>
                 </ion-label>
-                <ion-input placeholder="Nama Lengkap" type="text" [(ngModel)]="name" name="name"></ion-input>
+                <ion-input [(ngModel)]="register_user.name"  [ngModelOptions]="{standalone:true}" name="name" placeholder="Nama Lengkap Ibu" type="text"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label>
                   <ion-icon name="mail"></ion-icon>
                 </ion-label>
-                <ion-input placeholder="Email" type="email" [(ngModel)]="email" name="email"></ion-input>
+                <ion-input [(ngModel)]="register_user.email" [ngModelOptions]="{standalone:true}"  name="email" placeholder="Email" type="email"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label>
                   <ion-icon name="call"></ion-icon>
                 </ion-label>
-                <ion-input placeholder="Nomor Telepon" type="text" [(ngModel)]="phone" name="phone"></ion-input>
+                <ion-input [(ngModel)]="register_user.phone" [ngModelOptions]="{standalone:true}" name="phone" placeholder="Nomor Telepon" type="text"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label>
                   <ion-icon name="person"></ion-icon>
                 </ion-label>
-                <ion-input placeholder="Username" type="text" [(ngModel)]="username" name="username"></ion-input>
+                <ion-input [(ngModel)]="register_user.username" [ngModelOptions]="{standalone:true}" name="username" placeholder="Username" type="text"></ion-input>
               </ion-item>
+
               <ion-item>
                 <ion-label>
                   <ion-icon name="lock"></ion-icon>
                 </ion-label>
-                <ion-input placeholder="Password" type="password" [(ngModel)]="password" name="password"></ion-input>
+                <ion-input [(ngModel)]="register_user.password" [ngModelOptions]="{standalone:true}" name="password" placeholder="Password" type="password"></ion-input>
               </ion-item>
+
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="person"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Nama Bayi" [(ngModel)]="register_user.nama_anak" [ngModelOptions]="{standalone:true}" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Jenis Kelamin</ion-label>
+                <ion-select placeholder="Pilih Satu" [(ngModel)]="register_user.jk_anak" [ngModelOptions]="{standalone:true}">
+                  <ion-option value="0">Laki - Laki</ion-option>
+                  <ion-option value="1">Perempuan</ion-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="person"></ion-icon>
+                </ion-label>
+                <ion-input [(ngModel)]="register_user.bb_anak" [ngModelOptions]="{standalone:true}" placeholder="Berat Badan Saat Lahir" type="number"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Tanggal Lahir Bayi</ion-label>
+                <ion-datetime [(ngModel)]="register_user.tgl_lhr_anak" [ngModelOptions]="{standalone:true}" displayFormat="MM/DD/YYYY" min="2012-12-09"></ion-datetime>
+              </ion-item>
+
             </ion-list>
           </div>
           <div padding>
-            <button ion-button block type="submit">Register</button>
+            <button block ion-button type="submit">Register</button>
           </div>
         </ion-col>
       </ion-row>

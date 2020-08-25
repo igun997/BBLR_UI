@@ -20,15 +20,14 @@ export class BeritaPage {
     let dummy = [
       {
         src:"https://via.placeholder.com/400x200",
-        title:"Contoh Judul",
-        description:"lorem ipsum dolor sit amat , dan la al alalal",
+        title:"Metode kanguru",
+        description:"adalah perawatan bayi dengan berat badan lahir rendah yang dilakukan dari kulit-ke-kulit oleh ibu/suami. ...",
         id:1
-      },
-      {
+      },{
         src:"https://via.placeholder.com/400x200",
-        title:"Contoh Judul 2",
-        description:"lorem ipsum dolor sit amat , dan la al alalal",
-        id:2
+        title:"Nutrisi kebutuhan BBLR",
+        description:"Kebutuhan ASI pada bayi dengan berat badan > 2000 gram ...",
+        id:1
       }
     ]
     this.listBerita = dummy;

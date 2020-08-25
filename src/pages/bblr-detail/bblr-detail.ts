@@ -1,23 +1,32 @@
-import { Component,ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Chart } from 'chart.js';
+import {Component, ViewChild} from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Chart } from 'chart.js';
+/**
+ * Generated class for the BblrDetailPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-bblr-detail',
+  templateUrl: 'bblr-detail.html',
 })
-export class HomePage {
+export class BblrDetailPage {
   @ViewChild('priorityLength') priorityLength;
   @ViewChild('priorityDiameter') priorityDiameter;
   @ViewChild('priorityWeight') priorityWeight;
   chartPL: any;
   chartPD: any;
   chartPW: any;
-  colorArray: any;
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad BblrDetailPage');
+  }
   ionViewDidEnter() {
     this.createBarChart();
   }
@@ -107,5 +116,4 @@ export class HomePage {
       }
     });
   }
-
 }

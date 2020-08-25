@@ -1,0 +1,66 @@
+<!--
+  Generated template for the BblrDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="maroon">
+    <ion-title>Detail Statistik Anak</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Data Diri
+    </ion-card-header>
+    <ion-card-content>
+      <p><b>Nama Lengkap :</b> Cyntia Putri </p>
+      <p><b>Berat Badan (Sekarang) :</b> 500 gr </p>
+      <p><b>Panjang Badan (Sekarang) :</b> 15 cm </p>
+      <p><b>Lingkar Kepala (Sekarang) :</b> 19 cm </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Panjang
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #priorityLength></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Lingkar Kepala
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #priorityDiameter></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Berat
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #priorityWeight></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <div class="row header">
+        <div class="col">No</div>
+        <div class="col">Tgl. Pencatatan</div>
+        <div class="col">Status</div>
+      </div>
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">31-07-2020 (09:00)</div>
+        <div class="col">
+          Terverifikasi
+        </div>
+      </div>
+  </ion-card>
+
+</ion-content>

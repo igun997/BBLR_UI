@@ -15,6 +15,8 @@ import {BeritaPage} from "../pages/berita/berita";
 import {BblrPage} from "../pages/bblr/bblr";
 import {LogoutPage} from "../pages/logout/logout";
 import {BeritaDetailPage} from "../pages/berita-detail/berita-detail";
+import {BblrDetailPage} from "../pages/bblr-detail/bblr-detail";
+import {BblrFormPage} from "../pages/bblr-form/bblr-form";
 @NgModule({
   declarations: [
     MyApp,
@@ -23,6 +25,8 @@ import {BeritaDetailPage} from "../pages/berita-detail/berita-detail";
     RegisterPage,
     BeritaPage,
     BblrPage,
+    BblrDetailPage,
+    BblrFormPage,
     LogoutPage,
     BeritaDetailPage,
     TabsPage
@@ -41,6 +45,8 @@ import {BeritaDetailPage} from "../pages/berita-detail/berita-detail";
     RegisterPage,
     BeritaPage,
     BblrPage,
+    BblrDetailPage,
+    BblrFormPage,
     LogoutPage,
     BeritaDetailPage,
     TabsPage

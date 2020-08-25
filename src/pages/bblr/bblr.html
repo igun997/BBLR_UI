@@ -5,11 +5,45 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>bblr</ion-title>
+  <ion-navbar color="maroon">
+    <ion-title>BBLR</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini (click)="add_anak()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <ion-list>
+    <ion-item-sliding *ngFor="let anak of list_anak" #item>
+      <ion-item>
+        {{anak.nama}}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="detail(anak.id)">
+          <ion-icon name="open"></ion-icon>
+          Detail
+        </button>
+        <button ion-button color="success" (click)="add_stat(anak.id)" >
+          <ion-icon name="add-circle"></ion-icon>
+          LK / PJ
+        </button>
+        <button ion-button color="success" (click)="add_berat(anak.id)">
+          <ion-icon name="add-circle"></ion-icon>
+          Berat
+        </button>
+        <button ion-button color="success" (click)="add_nutrisi(anak.id)">
+          <ion-icon name="add-circle"></ion-icon>
+          Nutrisi
+        </button>
+      </ion-item-options>
 
+      <ion-item-options side="right">
+        <button ion-button (click)="edit(anak.id)">
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

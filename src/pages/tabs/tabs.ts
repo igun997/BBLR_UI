@@ -6,6 +6,7 @@ import {AuthProvider} from "../../providers/auth/auth";
 import {NavController} from "ionic-angular";
 
 @Component({
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

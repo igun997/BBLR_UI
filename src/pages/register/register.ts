@@ -14,12 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  username : string = ''
-  password : string = ''
-  name : string = ''
-  email : string = ''
-  phone : string = ''
+  register_user = {
+    bb_anak: "",
+    tgl_lhr_anak: "",
+    jk_anak: "",
+    nama_anak: "",
+    password: "",
+    email: "",
+    phone: "",
+    username: "",
+    name: "",
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
@@ -27,14 +34,8 @@ export class RegisterPage {
   }
 
   register(){
-    let build = {
-      username:this.username,
-      password:this.password,
-      name:this.name,
-      email:this.email,
-      phone:this.phone,
-    }
-
+    let build = this.register_user;
+    alert(build.nama_anak);
     console.log(build)
   }
 

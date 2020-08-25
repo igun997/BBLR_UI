@@ -1,0 +1,159 @@
+<!--
+  Generated template for the BblrFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="maroon">
+    <ion-title *ngIf="type == 'add'">Tambah Anak</ion-title>
+    <ion-title *ngIf="type == 'stat'">Tambah Lingkar / Panjang</ion-title>
+    <ion-title *ngIf="type == 'berat'">Tambah Berat Badan</ion-title>
+    <ion-title *ngIf="type == 'edit'">Edit Anak</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form *ngIf="type == 'stat'"  #form="ngForm" (ngSubmit)="add_stat()">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center>
+          <div text-center>
+            <h3>{{id}}</h3>
+          </div>
+          <div padding>
+            <ion-list>
+
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Lingkar Kepala anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="lingkar_kepala" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Panjang Badan anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="panjang_naka" name="name"></ion-input>
+              </ion-item>
+            </ion-list>
+          </div>
+          <div padding>
+            <button ion-button block type="submit">Simpan</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <form *ngIf="type == 'berat'"  #form="ngForm" (ngSubmit)="add_berat()">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center>
+          <div text-center>
+            <h3>{{id}}</h3>
+          </div>
+          <div padding>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Berat Badan anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="berat_badan" name="name"></ion-input>
+              </ion-item>
+            </ion-list>
+          </div>
+          <div padding>
+            <button ion-button block type="submit">Simpan</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <form *ngIf="type == 'edit'"  #form="ngForm" (ngSubmit)="edit()">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center>
+          <div text-center>
+            <h3>{{id}}</h3>
+          </div>
+          <div padding>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="person"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Nama Anak" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone:true}" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Jenis Kelamin</ion-label>
+                <ion-select placeholder="Pilih Satu" [(ngModel)]="jk" [ngModelOptions]="{standalone:true}">
+                  <ion-option value="0">Laki - Laki</ion-option>
+                  <ion-option value="1">Perempuan</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Tanggal Lahir Bayi</ion-label>
+                <ion-datetime [ngModelOptions]="{standalone:true}" [(ngModel)]="tgl_lhr"  displayFormat="MM/DD/YYYY"  min="2012-12-09" ></ion-datetime>
+              </ion-item>
+            </ion-list>
+          </div>
+          <div padding>
+            <button ion-button block type="submit">Simpan</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <form *ngIf="type == 'add'"  #form="ngForm" (ngSubmit)="add_anak()">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center>
+          <div padding>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="person"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Nama Anak" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone:true}" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Jenis Kelamin</ion-label>
+                <ion-select placeholder="Pilih Satu" [(ngModel)]="jk" [ngModelOptions]="{standalone:true}">
+                  <ion-option value="0">Laki - Laki</ion-option>
+                  <ion-option value="1">Perempuan</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Berat Badan anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="berat_badan" name="name"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Lingkar Kepala anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="lingkar_kepala" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="list"></ion-icon>
+                </ion-label>
+                <ion-input placeholder="Panjang Badan anak"  type="number" [ngModelOptions]="{standalone:true}" [(ngModel)]="panjang_naka" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="stacked">Tanggal Lahir Bayi</ion-label>
+                  <ion-datetime [ngModelOptions]="{standalone:true}" [(ngModel)]="tgl_lhr"  displayFormat="MM/DD/YYYY"  min="2020-01-01" ></ion-datetime>
+              </ion-item>
+
+            </ion-list>
+          </div>
+          <div padding>
+            <button ion-button block type="submit">Simpan</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

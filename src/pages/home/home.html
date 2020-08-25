@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-navbar hideBackButton="true">
+<ion-header >
+  <ion-navbar color="maroon" hideBackButton="true">
     <ion-title>Beranda</ion-title>
   </ion-navbar>
 </ion-header>
@@ -7,10 +7,28 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Statistik
+      Panjang
     </ion-card-header>
     <ion-card-content>
-      <canvas #homeChart></canvas>
+      <canvas #priorityLength></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Lingkar Kepala
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #priorityDiameter></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Berat
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #priorityWeight></canvas>
     </ion-card-content>
   </ion-card>
 </ion-content>
